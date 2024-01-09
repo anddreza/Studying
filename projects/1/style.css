@@ -1,7 +1,7 @@
 html, body{
     margin: 0;
     padding: 0;
-    background-color: #aaaa;
+    background-color: #00ff7f;
 
 }
 
@@ -24,7 +24,7 @@ html, body{
     border-radius: 10px;  
     color: #fff;
     font-size: 5rem;
-    border: 5px solid #ffd523;
+    border: 5px solid black;
     font-family: 'Barlow Condensed', sans-serif;
 }
 
