@@ -4,16 +4,20 @@ function newButton(text, callback) {
    
     $button.textContent = text;
 
-    callback();
+    callback($button);
     $body.insertAdjacentElement('beforeend', $button);
 
     return $button;
 }
 
 //estou passando para dentro da função newButton outra função por parametro
-newButton("Login", () => {
-    console.log("funcionou!");
+newButton("Login", (button) => {
+    button.style.cssText = `
+        font-size: 30px;
+    `;
 });
-newButton("Signup", () => {
-    console.log("funcionou 2");
+newButton("Signup", (button) => {
+    button.style.cssText = `
+    font-size: 40px;
+`;
 });
