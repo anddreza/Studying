@@ -14,5 +14,6 @@ var watchID = navigator.geolocation.watchPosition(success, error, {
     timeout: 1000
 });
 
+//para não visualização das informações. 
 //navigator.geolocation.clearWatch(watchID);
 
