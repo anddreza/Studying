@@ -7,7 +7,7 @@ def inverter_lista(lista):
         lista[tamanho-i] = aux
 
 # 4 + N complexidade de espaço 
-# 2 + 3*(N/2) - Complexidade de tempo
+# 2 + 2*N - Complexidade de tempo = O(n)
         
 def inverter_lista2(lista):
     nova_lista = []
@@ -18,3 +18,15 @@ def inverter_lista2(lista):
 
 # 2 + N tempo
 # 3 + 2*N
+
+def tem_duplicados(lista):
+    for i in range(len(lista)-1):
+        for j in range(i+1, len(lista)):
+            if lista[i] == lista[j]:
+                return True
+    return False
+
+# Progressão Aritmética
+# N-1 + N-2 + N-3 + ... + 1 = N*(N-1)/2 
+# (N^2 - N)/2 + 1 = O(n^2)
+
