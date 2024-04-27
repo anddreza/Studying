@@ -1,0 +1,4 @@
+1. A complexidade do algoritmo é a medida de recursos demandados por esse algoritmo para sua execução de uma maneira que seja independente da linguagem de programação que esse algoritmo foi implementado e também o computador (a máquina que será executado)
+2. como a complexidade de algoritmo cresce com o tamanho da entrada, o que mais nos interessa é o comportamento da complexidade do algoritmo com n, o tamanho da entrada. 
+3. Nós expressamos a complexidade do algoritmo através da notação O grande, e é muito útil pois nós permite focar apenas no termo dominante da função, qual que é o comportamento daquele algoritmo.
+4. Quando tivermos algoritmos que podemos encerrar de várias maneiras diferentes fazendo um número diferente de operações, iremos calcular a complexidade do pior caso. 
