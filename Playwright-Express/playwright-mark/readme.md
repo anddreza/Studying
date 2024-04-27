@@ -13,7 +13,7 @@ Nesse curso será verificado:
 * As vantagens ao usar Typescript para testes automatizados
 
 ## Getting Started
-- Prerequisites: Install Visual Studio Code, Node 18, Windows Terminal, Git
+- Prerequisites: Install Visual Studio Code, Node 18.12.1, Windows Terminal, Git, Playwright
 
 ### Installing
  
@@ -45,6 +45,9 @@ https://dev.to/hatemtemimi/testing-with-playwright-gn5
 Install: yarn add @faker-js/faker -D
 https://www.npmjs.com/package/@faker-js/faker
 
+- Read Playwright vs Cypress: https://testsigma.com/blog/playwright-vs-cypress/
+
 ## Share knowledge
 - Software Quality isn't just about testing requirements
 - QA doesn't need to work alone, Software Quality is shared among team members.
+- Tests, manual or automated, is composed of: precondition, action, expected result
