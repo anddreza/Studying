@@ -37,6 +37,14 @@ Nesse curso será verificado:
 10. yarn playwright test tasks --debug : dessa forma você pod executar somente o arquivo 'tasks' em modo debug (opcional)
 
 
-## Readme
-I started study more about Plawright and I found this website with good locators:
+## Read
+- I started to study more about Plawright and I found this website with good locators:
 https://dev.to/hatemtemimi/testing-with-playwright-gn5
+
+- dynamic data with faker
+Install: yarn add @faker-js/faker -D
+https://www.npmjs.com/package/@faker-js/faker
+
+## Share knowledge
+- Software Quality isn't just about testing requirements
+- QA doesn't need to work alone, Software Quality is shared among team members.
