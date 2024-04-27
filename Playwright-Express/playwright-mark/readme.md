@@ -25,6 +25,7 @@ Nesse curso será verificado:
 4. npm run dev
 
 
+
 ### Executing program
 
 
@@ -35,7 +36,9 @@ Nesse curso será verificado:
 8. headless: false: para não precisar passar o tempo todo --headed, isso foi alterado no arquivo de configuração
 9. yarn playwright test --debug : onde é possível analisar cada step em tempo real
 10. yarn playwright test tasks --debug : dessa forma você pod executar somente o arquivo 'tasks' em modo debug (opcional)
-
+11. yarn add dotenv -D | npm i dotenv --save-dev
+12. yarn remove @faker-js/faker: dotenv (npmjs.com/package/dotenv)
+13. Simple configs: screenshot: 'only-on-failure'
 
 ## Read
 - I started to study more about Plawright and I found this website with good locators:
@@ -47,7 +50,13 @@ https://www.npmjs.com/package/@faker-js/faker
 
 - Read Playwright vs Cypress: https://testsigma.com/blog/playwright-vs-cypress/
 
+- Make a review: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+
 ## Share knowledge
 - Software Quality isn't just about testing requirements
 - QA doesn't need to work alone, Software Quality is shared among team members.
 - Tests, manual or automated, is composed of: precondition, action, expected result
+
+## Bonus
+
+https://github.com/qax-education/playwright-actions
