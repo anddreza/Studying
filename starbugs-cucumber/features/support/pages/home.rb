@@ -3,10 +3,9 @@ require 'capybara/dsl'
 class HomePage
     include Capybara::DSL
 
-
     def open
-        visit 'https://starbugs.vercel.app/'   
-    end 
+        visit 'https://starbugs-qa.vercel.app/'
+    end
 
     def coffee_list
         return all('.coffee-item')
@@ -15,6 +14,5 @@ class HomePage
     def buy(coffee_name)
         product = find('.coffe-item', text: coffee_name)
         product.find('.buy-coffee').click
-    end 
-
+    end
 end
