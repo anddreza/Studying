@@ -1,34 +1,34 @@
-Quando('acesso a página principal da Startbugs') do
-    @home.open
-  end
-  
+Quando('acesso a página principal da Starbugs') do
+  @home.open
+end
+
 Então('eu devo ver uma lista de cafés disponíveis') do
     expect(@home.coffee_list.size).to be > 0
-  end
+end
 
 Dado('que estou na página principal da Starbugs') do
   @home.open
 end
 
-Dado('que desejo comprar o seguinte produto:') do |table| 
+Dado('que desejo comprar o seguinte produto:') do |table|
    @product = table.rows_hash
 end
 
 # Dado('que desejo comprar o café{string}') do |product_name|
 #   @product_name = product_name
-# end 
+# end
 
 # Dado('que esse produto custa {string}') do |product_price|
 #   @product_price = product_price
-# end 
+# end
 
 # Dado('que o custo de entrega é de {string}') do |delivery_price|
 #   @delivery_price = delivery_price
-# end 
+# end
 
-Quando('inicio a compra desse item') do 
+Quando('inicio a compra desse item') do
   @home.buy(@product[:name])
-end 
+end
 
 Então('devo ver a página de Checkout com os detalhes do produto') do
   # product_title = find('.item-details h1')
