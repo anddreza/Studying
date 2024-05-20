@@ -1,5 +1,5 @@
 
-#language: pt
+#language:pt
 
 Funcionalidade: Catálogo de cafés
     Como um usuário do site, eu quero ver o catálogo de cafés na página principal
