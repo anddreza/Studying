@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.10.12 on linux)" generated="2024-06-06T11:34:56.765900" rpa="false" schemaversion="5">
+<suite id="s1" name="Create" source="/home/andreza/Studying/robot-express/mark85-robot-express/tests/tasks/create.robot">
+<test id="s1-t1" name="Deve poder cadastrar uma nova tarefa" line="11">
+<kw name="Start Session" owner="base" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-06-06T11:34:58.106914" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/home/andreza/Studying/robot-express/mark85-robot-express/browser/traces/33595344-6949-4f9c-a583-1313ecf9480e"}</msg>
+<msg time="2024-06-06T11:34:58.955585" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/home/andreza/Studying/robot-express/mark85-robot-express/browser/traces/33595344-6949-4f9c-a583-1313ecf9480e"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-06-06T11:34:58.102333" elapsed="0.854498"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-06-06T11:34:59.896037" level="INFO">Successfully initialized new page object and opened url: http://localhost:3000</msg>
+<msg time="2024-06-06T11:34:59.897391" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-06-06T11:34:58.958020" elapsed="0.941094"/>
+</kw>
+<status status="PASS" start="2024-06-06T11:34:58.097916" elapsed="1.802337"/>
+</kw>
+<kw name="Get fixtures" owner="base">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2024-06-06T11:34:59.917794" level="INFO">${data} = {'create': {'user': {'name': 'Steve Jobs', 'email': 'jose@apple.com', 'password': 'pwd123'}, 'tasks': {'name': 'Criar uma nova versão do Ipod', 'tags': ['ios', 'music', 'ipod']}}}</msg>
+<var>${data}</var>
+<arg>${EXECDIR}/resources/fixtures/${file_name}.json</arg>
+<arg>encoding=utf-8</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2024-06-06T11:34:59.906865" elapsed="0.014990"/>
+</kw>
+<return>
+<value>${data}[${scenario}]</value>
+<status status="PASS" start="2024-06-06T11:34:59.922978" elapsed="0.001774"/>
+</return>
+<msg time="2024-06-06T11:34:59.926587" level="INFO">${data} = {'user': {'name': 'Steve Jobs', 'email': 'jose@apple.com', 'password': 'pwd123'}, 'tasks': {'name': 'Criar uma nova versão do Ipod', 'tags': ['ios', 'music', 'ipod']}}</msg>
+<var>${data}</var>
+<arg>tasks</arg>
+<arg>create</arg>
+<status status="PASS" start="2024-06-06T11:34:59.903543" elapsed="0.025282"/>
+</kw>
+<kw name="Clean user from database">
+<msg time="2024-06-06T11:34:59.938601" level="FAIL">No keyword with name 'Clean user from database' found.</msg>
+<arg>${data}[user][email]</arg>
+<status status="FAIL" start="2024-06-06T11:34:59.937325" elapsed="0.004784">No keyword with name 'Clean user from database' found.</status>
+</kw>
+<kw name="Insert user from database">
+<arg>${data}[user]</arg>
+<status status="NOT RUN" start="2024-06-06T11:34:59.951500" elapsed="0.001018"/>
+</kw>
+<kw name="Submit login form" owner="LoginPage">
+<arg>${data}[user]</arg>
+<status status="NOT RUN" start="2024-06-06T11:34:59.954486" elapsed="0.001335"/>
+</kw>
+<kw name="User should be logged in" owner="Headers">
+<arg>${data}[user][name]</arg>
+<status status="NOT RUN" start="2024-06-06T11:34:59.957225" elapsed="0.001175"/>
+</kw>
+<kw name="Go to task form" owner="Headers">
+<status status="NOT RUN" start="2024-06-06T11:34:59.963557" elapsed="0.000884"/>
+</kw>
+<kw name="Submit task form" owner="TaskCreatePage">
+<arg>${data}[task]</arg>
+<status status="NOT RUN" start="2024-06-06T11:34:59.969775" elapsed="0.001194"/>
+</kw>
+<kw name="Task should be registered" owner="TasksPage">
+<arg>${data}[task][name]</arg>
+<status status="NOT RUN" start="2024-06-06T11:34:59.975017" elapsed="0.000943"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser" type="TEARDOWN">
+<msg time="2024-06-06T11:35:00.330522" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-06-06T11:34:59.979535" elapsed="0.352453"/>
+</kw>
+<status status="FAIL" start="2024-06-06T11:34:58.075061" elapsed="2.259247">No keyword with name 'Clean user from database' found.</status>
+</test>
+<doc>Cenários de cadastro de tarefas</doc>
+<status status="FAIL" start="2024-06-06T11:34:56.776315" elapsed="3.757764"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Create">Create</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-06-06T11:34:56.820713" level="WARN">Error in file '/home/andreza/Studying/robot-express/mark85-robot-express/resources/base.resource' on line 31: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-06-06T11:34:56.822886" level="ERROR">Error in file '/home/andreza/Studying/robot-express/mark85-robot-express/resources/base.resource' on line 3: Importing library '/home/andreza/Studying/robot-express/mark85-robot-express/resources/libs/database.py' failed: SyntaxError: invalid syntax (database.py, line 16)
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /home/andreza/Studying/robot-express/mark85-robot-express/resources/libs
+  /home/andreza/.vscode/extensions/robocorp.robotframework-lsp-1.12.0/src/robotframework_debug_adapter
+  /home/andreza/Studying/robot-express/mark85-robot-express
+  /home/andreza/.vscode/extensions/robocorp.robotframework-lsp-1.12.0/src
+  /home/andreza/.vscode/extensions/robocorp.robotframework-lsp-1.12.0/src/robotframework_ls/vendored
+  /usr/lib/python310.zip
+  /usr/lib/python3.10
+  /usr/lib/python3.10/lib-dynload
+  /home/andreza/.local/lib/python3.10/site-packages
+  /usr/local/lib/python3.10/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+</errors>
+</robot>

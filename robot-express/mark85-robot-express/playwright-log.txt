@@ -1,0 +1,47 @@
+{"level":30,"time":"2024-06-06T14:34:57.962Z","pid":49787,"hostname":"multiplier","msg":"Listening on 36283"}
+(node:49787) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2024-06-06T14:34:58.067Z","pid":49787,"hostname":"multiplier","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:34:58.069Z","pid":49787,"hostname":"multiplier","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:34:58.087Z","pid":49787,"hostname":"multiplier","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:34:58.088Z","pid":49787,"hostname":"multiplier","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:34:58.115Z","pid":49787,"hostname":"multiplier","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-06-06T14:34:58.947Z","pid":49787,"hostname":"multiplier","msg":"Adding browser to stack: chromium, version: 125.0.6422.26"}
+{"level":30,"time":"2024-06-06T14:34:58.950Z","pid":49787,"hostname":"multiplier","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-06-06T14:34:58.949Z","pid":49787,"hostname":"multiplier","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-06-06T14:34:58.967Z","pid":49787,"hostname":"multiplier","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-06-06T14:34:58.970Z","pid":49787,"hostname":"multiplier","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-06-06T14:34:59.016Z","pid":49787,"hostname":"multiplier","msg":"Changed active context"}
+{"level":30,"time":"2024-06-06T14:34:59.461Z","pid":49787,"hostname":"multiplier","msg":"Video path: undefined"}
+{"level":30,"time":"2024-06-06T14:34:59.461Z","pid":49787,"hostname":"multiplier","msg":"Changed active page"}
+{"level":30,"time":"2024-06-06T14:34:59.891Z","pid":49787,"hostname":"multiplier","msg":"End of node method newPage"}
+{"level":30,"time":"2024-06-06T14:34:59.990Z","pid":49787,"hostname":"multiplier","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2024-06-06T14:34:59.991Z","pid":49787,"hostname":"multiplier","Take screenshot with options: ":{"path":"/home/andreza/Studying/robot-express/mark85-robot-express/browser/screenshot/robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2024-06-06T14:35:00.327Z","pid":49787,"hostname":"multiplier","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2024-06-06T14:35:00.353Z","pid":49787,"hostname":"multiplier","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:35:00.360Z","pid":49787,"hostname":"multiplier","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:35:00.369Z","pid":49787,"hostname":"multiplier","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:35:00.374Z","pid":49787,"hostname":"multiplier","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:35:00.383Z","pid":49787,"hostname":"multiplier","msg":"Changed active context"}
+{"level":30,"time":"2024-06-06T14:35:00.384Z","pid":49787,"hostname":"multiplier","msg":"Changing current active page: page=c891f5a5-9d40-4d00-94fd-ef5f5514f7ca"}
+{"level":30,"time":"2024-06-06T14:35:00.384Z","pid":49787,"hostname":"multiplier","msg":"Changed active page"}
+{"level":30,"time":"2024-06-06T14:35:00.394Z","pid":49787,"hostname":"multiplier","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:35:00.400Z","pid":49787,"hostname":"multiplier","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:35:00.407Z","pid":49787,"hostname":"multiplier","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-06-06T14:35:00.408Z","pid":49787,"hostname":"multiplier","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-06-06T14:35:00.416Z","pid":49787,"hostname":"multiplier","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2024-06-06T14:35:00.419Z","pid":49787,"hostname":"multiplier","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2024-06-06T14:35:00.429Z","pid":49787,"hostname":"multiplier","msg":"Changing current active page: page=c891f5a5-9d40-4d00-94fd-ef5f5514f7ca"}
+{"level":30,"time":"2024-06-06T14:35:00.430Z","pid":49787,"hostname":"multiplier","msg":"Changed active page"}
+{"level":30,"time":"2024-06-06T14:35:00.447Z","pid":49787,"hostname":"multiplier","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:35:00.454Z","pid":49787,"hostname":"multiplier","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:35:00.460Z","pid":49787,"hostname":"multiplier","msg":"Changed active context"}
+{"level":30,"time":"2024-06-06T14:35:00.460Z","pid":49787,"hostname":"multiplier","msg":"Changing current active page: page=c891f5a5-9d40-4d00-94fd-ef5f5514f7ca"}
+{"level":30,"time":"2024-06-06T14:35:00.460Z","pid":49787,"hostname":"multiplier","msg":"Changed active page"}
+{"level":30,"time":"2024-06-06T14:35:00.469Z","pid":49787,"hostname":"multiplier","msg":"Start of node method closeContext"}
+{"level":30,"time":"2024-06-06T14:35:00.490Z","pid":49787,"hostname":"multiplier","msg":"Removed page=680589ce-b59c-491e-8c91-a249110f5be2 from context=2712c1a5-ae28-42e6-b984-b55bb4fd9d38 page stack"}
+{"level":30,"time":"2024-06-06T14:35:00.529Z","pid":49787,"hostname":"multiplier","msg":"End of node method closeContext"}
+{"level":30,"time":"2024-06-06T14:35:00.550Z","pid":49787,"hostname":"multiplier","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:35:00.551Z","pid":49787,"hostname":"multiplier","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2024-06-06T14:35:02.632Z","pid":49787,"hostname":"multiplier","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-06-06T14:35:02.819Z","pid":49787,"hostname":"multiplier","msg":"End of node method closeAllBrowsers"}
