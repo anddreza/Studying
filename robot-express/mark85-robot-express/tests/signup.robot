@@ -5,6 +5,7 @@ Documentation   Cenário de testes do cadastro de usuários
 #Library     FakerLibrary
 
 Resource    ../resources/base.resource
+Resource    ../resources/pages/components/Alert.resource
 
 Suite Setup     Log     Tudo aqui ocorre antes da Suite(antes de todos os testes)
 Suite Teardown  Log     Tudo aqui ocorre depois da Suite(depois de todos os testes)
@@ -73,9 +74,9 @@ Não deve cadastrar com email incorreto
 Não deve cadastrar com senha muito curta  
     [Tags]      temp
 
-    @{password_list} Create List     1       12      123     1234       12345
+    @{password_list}     Create List     1       12      123     1234       12345
     
-    FOR ${password} IN @{password_list}
+    FOR    ${password}    IN    @{password_list}
             ${user}         Create Dictionary
             ...     name=Fernando Papito
             ...     email=papito@msn.com
@@ -85,45 +86,4 @@ Não deve cadastrar com senha muito curta
         Submit signup form      ${user}
 
         Alert should be     Informe uma senha com pelo menos 6 digitos
-    
     END
-
-Não deve cadastrar com senha de 1 digito
-    [Tags]          short_pass
-    [Template]      
-    Short password  1
-
-Não deve cadastrar com senha de 2 digito
-    [Tags]          short_pass
-    [Template]      
-    Short password  12
-
-Não deve cadastrar com senha de 3 digito
-    [Tags]          short_pass
-    [Template]      
-    Short password  123
-
-Não deve cadastrar com senha de 4 digito
-    [Tags]          short_pass
-    [Template]      
-    Short password  1234
-
-Não deve cadastrar com senha de 5 digito
-    [Tags]          short_pass
-    [Template]      
-    Short password  12345
-
-*** Keywords ***
-Short password
-    [Arguments]     ${short_pass}
-
-    ${user}         Create Dictionary
-        ...     name=${EMPTY}
-        ...     email=${EMPTY}
-        ...     password=${short_pass}
-
-    Go to signup page 
-    Submit signup form      ${user}
-
-    Alert should be     Informe uma senha com pelo menos 6 digitos
-    
