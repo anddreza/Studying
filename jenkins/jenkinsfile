@@ -1,0 +1,40 @@
+stages {
+    stage('Clone'){
+        steps {
+            git branch: 'master'
+            url: 'https://github.com/devopsjourney1/helloworld.git'
+        }
+    }
+
+    stage('Build'){
+        steps {
+            sh '''
+            docker buold -t myawesomeapp:${BUILD_NUMBER}
+            '''
+        }
+    }
+
+    stage('Test'){
+        steps{
+            sh'''
+            docker run -it myawesomeapp:${BUILD_NUMBER}
+            curl localhost:5000
+            '''
+        }
+    }
+
+    stage('Package'){
+        steps{
+            sh'''
+            docker push devopsjourney/myawesomeapp:${BUILD_NUMBER}
+            '''
+        }
+    }
+    stage('Deploy'){
+        steps{
+             sh'''
+            docker push devopsjourney/myawesomeapp:${BUILD_NUMBER}
+            '''
+        }
+    }
+}
