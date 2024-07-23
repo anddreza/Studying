@@ -32,11 +32,13 @@ public class BaseTests {
         // driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         goHome();
         setCookie();
-        // driver.manage().window().setSize(new Dimension(375, 812));
+        // driver.manage().window().setSize(new Dimension(375, 812)); //this is for Iphone
 
+          //driver.findElements(By.tagName("a"));
         //   List<WebElement> links = driver.findElements(By.tagName("a"));
         //   System.out.println(links.size());
 
+        //This method here we call interact with everyone USE Inputs
         //   WebElement inputsLink = driver.findElement(By.linkText("Input"));
         //   inputsLink.click();
 
