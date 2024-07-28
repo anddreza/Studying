@@ -5,12 +5,26 @@ import java.util.Scanner;
 public class Exercicio15 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
+        System.out.println("Entre com n-ésimo termo da série de Fibonacci");
+        int n = sc.nextInt();
 
-        for(int i = 1; i < a; i++){
-            // F(n + 2) = F(n + 1) + F(n) , com n ≥ 1 e F(1) = F(2) = 1
+        int primeiro = 1;
+        int segundo = 1;
+        int proximo;
 
-            System.out.println("Série: " + i );
+        System.out.println(primeiro);
+        System.out.println(segundo);
+        //1,1,2,3,5
+        for (int i = 3; i <= n; i++){
+
+            proximo = primeiro + segundo;
+            primeiro = segundo;
+            segundo = proximo;
+
+            System.out.println(proximo);
         }
+
+
+
     }
 }
